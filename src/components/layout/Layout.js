@@ -1,11 +1,11 @@
 import React from "react";
 import Container from "../../containers/Container";
-import Navbar from "../navbar/Navbar";
+import NavContainer from "../navbar/navContainer/NavContainer";
 
 const Layout = ({ children }) => {
     return (
         <>
-            <Navbar />
+            <NavContainer />
             <Container>{children}</Container>
         </>
     );
