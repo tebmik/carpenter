@@ -8,6 +8,7 @@ const HambContainer = styled.div`
     display: grid;
     align-items: center;
     justify-content: end;
+    z-index: 2000;
 `;
 
 const StyledHamb = styled.div`
@@ -24,7 +25,10 @@ const StyledHamb = styled.div`
     position: absolute;
     height: 4.5px;
     width: 100%;
-    background: #000;
+    background: ${({white, dark}) => {
+      if(white) return "var(--color-white)";
+      if(dark) return "var(--color-heading)";
+    }};
     border-radius: 9px;
     opacity: 1;
     left: 0;
@@ -53,11 +57,11 @@ const StyledHamb = styled.div`
   }
 `;
 
-const Hamburger = ({ clicked, opened }) => {
+const Hamburger = ({ clicked, opened, white, dark }) => {
     return (
         <>
             <HambContainer>
-                <StyledHamb opened={opened} onClick={clicked} >
+                <StyledHamb white={white} dark={dark} opened={opened} onClick={clicked} >
                     <span></span>
                     <span></span>
                     <span></span>
