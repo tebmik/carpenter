@@ -7,11 +7,12 @@ import MobileDrawer from "./drawer/MobileDrawer";
 
 
 const StyledMobile = styled.div`
+    z-index: 1001;
     height: 8rem;
     width: 100%;
-    background-color: gray;
+    background-color: transparent;
     display: block;
-    position: fixed;
+    position: absolute;
     top: 0;
     left: 0;
 
@@ -39,8 +40,8 @@ const MobileNav = () => {
         <>
             <StyledMobile>
                 <Wrapper>
-                    <Logo />
-                    <Hamburger opened={opened} clicked={() => setOpened(!opened)} />
+                    <Logo light white />
+                    {/* <Hamburger white opened={opened} clicked={() => setOpened(!opened)} /> */}
                 </Wrapper>
             </StyledMobile>
             <MobileDrawer opened={opened} clicked={() => setOpened(false)} />
