@@ -10,13 +10,13 @@ const App = () => {
     return (
         <>
             <div id="app">
+                <Hero />
                 <Layout>
-                    <Hero />
                     <About />
                     <Gallery />
                     <Contact />
-                    <Footer />
                 </Layout>
+                <Footer />
             </div>
         </>
     );
