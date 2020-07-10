@@ -12,15 +12,43 @@ const StyledItems = styled.div`
     grid-template-columns: ${({mobile}) => (mobile ? "1fr" : "1fr 1fr 1fr 1fr")};
 `;
 
-const NavItems = ({ mobile, clicked }) => {
+const NavItems = ({ mobile, clicked, white, dark, heavy, light }) => {
     console.log(clicked);
     return (
         <>
             <StyledItems mobile={mobile}>
-                <NavItem clicked={clicked} mobile={mobile} title="Home" />
-                <NavItem clicked={clicked} mobile={mobile} title="About" />
-                <NavItem clicked={clicked} mobile={mobile} title="Gallery" />
-                <NavItem clicked={clicked} mobile={mobile} title="Contact" />
+                <NavItem 
+                    heavy={heavy} 
+                    light={light} 
+                    white={white} 
+                    dark={dark} 
+                    clicked={clicked} 
+                    mobile={mobile} 
+                    title="Home" />
+                <NavItem 
+                    heavy={heavy} 
+                    light={light} 
+                    white={white} 
+                    dark={dark} 
+                    clicked={clicked} 
+                    mobile={mobile} 
+                    title="About" />
+                <NavItem 
+                    heavy={heavy} 
+                    light={light} 
+                    white={white} 
+                    dark={dark} 
+                    clicked={clicked} 
+                    mobile={mobile} 
+                    title="Gallery" />
+                <NavItem 
+                    heavy={heavy} 
+                    light={light} 
+                    white={white} 
+                    dark={dark} 
+                    clicked={clicked} 
+                    mobile={mobile} 
+                    title="Contact" />
             </StyledItems>
         </>
     );
