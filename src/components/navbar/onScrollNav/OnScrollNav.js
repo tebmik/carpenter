@@ -41,7 +41,7 @@ const MobileHamburger = styled.div`
 `;
 
 const ScrollNav = styled(AppBar)`
-    background-color: #fff !important;
+    background-color: rgba(225, 225, 225, 0.99) !important;
     min-height: 8rem;
     display: grid !important;
     align-items: center !important;
