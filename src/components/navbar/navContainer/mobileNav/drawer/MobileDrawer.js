@@ -6,7 +6,7 @@ import NavItems from "../../../navItems/NavItems";
 
 const StyledDrawer = styled.div`
     border-top-right-radius: 2rem;
-    z-index: 1000;
+    z-index: 2000;
     position: fixed;
     top: 0;
     height: 100%;
