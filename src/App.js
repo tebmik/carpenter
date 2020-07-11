@@ -5,6 +5,7 @@ import About from "./containers/about/About";
 import Gallery from "./containers/gallery/Gallery";
 import Contact from "./containers/contact/Contact";
 import Footer from "./containers/footer/Footer"
+import Why from "./containers/whyChooseUs/WhyChooseUs";
 
 const App = () => {
     return (
@@ -14,6 +15,7 @@ const App = () => {
                 <Layout>
                     <About />
                     <Gallery />
+                    <Why />
                     <Contact />
                 </Layout>
                 <Footer />
