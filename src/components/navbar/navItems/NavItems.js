@@ -13,7 +13,6 @@ const StyledItems = styled.div`
 `;
 
 const NavItems = ({ mobile, clicked, white, dark, heavy, light }) => {
-    console.log(clicked);
     return (
         <>
             <StyledItems mobile={mobile}>
