@@ -1,6 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { StyledPageWrapper, H1 } from "../styled";
+import { StyledPageWrapper, Typography } from "../styled";
+
+import Heading from "./titleArea/Heading";
 
 const PageContent = styled.div`
     background-image: url("https://images.unsplash.com/reserve/oIpwxeeSPy1cnwYpqJ1w_Dufer%20Collateral%20test.jpg?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1216&q=80");
@@ -15,14 +17,29 @@ const PageContent = styled.div`
 const StyledHeading = styled.div`
     background-color: rgba(0,0,0,0.3);
     padding: 3rem;
-    // border-radius: 2rem;
-    display: grid;
-    justify-content: center;
-    align-items: center;
     height: 100vh;
     position: relative;
+    
 `;
 
+const HeadingsContainer = styled.div`
+    max-width: 120rem;
+    width: 100%;
+    margin: 0 auto;
+    // padding: 2rem;
+    height: 100%;
+    display: flex;
+    align-items: center;
+
+    @media only screen and (min-width: 769px) {
+        padding: 2rem;
+    }
+`;
+
+const HeadingList = styled.div`
+    display: flex;
+    flex-direction: column;
+`;
 
 const Hero = () => {
     return (
@@ -32,7 +49,18 @@ const Hero = () => {
                     {/* <img src={process.env.PUBLIC_URL + 'images/todd-quackenbush-IClZBVw5W5A-unsplash.jpg'} alt="Duff" /> */}
                     <div className="parallax-img"></div>
                     <StyledHeading>
-                        <H1 white>Duff / Job</H1>
+                        <HeadingsContainer>
+                            <HeadingList>
+                                <Heading title="Bathrooms" color="var(--color-white)" />
+                                <Heading title="Kitchens" color="var(--color-white)" />
+                                <Heading title="Extensions" color="var(--color-white)" />
+                                <Heading title="Refurbishments" color="var(--color-white)" />
+                                <Heading title="Gardens" color="var(--color-white)" />
+                                <Typography color="white" size="subResponsive" fontWeight="400" margin>
+                                    We’re a propery improvement business operating in Portugal, offering a wide range of services.
+                                </Typography>
+                            </HeadingList>
+                        </HeadingsContainer>
                     </StyledHeading>
                 </PageContent>
             </StyledPageWrapper>
